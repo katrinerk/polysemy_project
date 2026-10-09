@@ -37,10 +37,6 @@ def filtered(dir, word):
                             currRow["subj"].append(subj.lemma_)
                         if dobj:
                             currRow["dobj"].append(dobj.lemma_)
-                        # if token.dep_ == "dobj": 
-                        #     currRow["dobj"].append(token.lemma_)
-                        # if token.dep_ == "nsubj":
-                        #     currRow["subj"].append(token.lemma_)
                 if len(currRow["dobj"]) ==1 and len(currRow["subj"]) == 1: 
                     row = pd.DataFrame(currRow)
                     data = pd.concat([data,row], ignore_index=True)
