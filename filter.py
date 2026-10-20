@@ -34,7 +34,7 @@ def filtered(dir, word):
                         subj = gso.get_subject(token)
                         dobj = gso.get_direct_object(token)
                         if subj:
-                            currRow["subj"].append(subj.lemma_)
+                            currRow["subj"].append(subj.text)
                         if dobj:
                             currRow["dobj"].append(dobj.lemma_)
                 if len(currRow["dobj"]) ==1 and len(currRow["subj"]) == 1: 
